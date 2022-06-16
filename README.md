@@ -12,9 +12,9 @@ Anggota Kelompok:
 # AI Project Cycle (Computer Vision)
 
 # Problem Solving
-Who : masyarakat dan khususnya wisatawan asing
+Who : masyarakat dan khususnya wisatawan asing.
 What : kurangnya informasi mengenai jenis-jenis kue indonesia sehingga dibuatlah sebuah aplikasi berbasis web untuk membantu masyarakat mencari tau mengenai kue-kue tradisional indonesia.
-Where: pada saat masyarakat yang berada di dalam maupun di luar Indonesia membutuhkan informasi mengenai kue tradisional indonesia (?)
+Where: pada saat masyarakat yang berada di dalam maupun di luar Indonesia membutuhkan informasi mengenai kue tradisional indonesia (?).
 Why : nilai utama dari permasalahan ini adalah membantu menyalurkan informasi mengenai kue tradisional Indonesia
 
 # Data Acquisition
