@@ -1,5 +1,5 @@
 # Klasifikasi Kue Tradisional Indonesia Menggunakan Algoritma CNN dan VisionTransformer
-*Proyek Akhir MBKM Orbit
+Proyek Akhir MBKM Orbit
 
 Anggota Kelompok:
 
