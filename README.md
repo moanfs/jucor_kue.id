@@ -21,5 +21,5 @@ Why : nilai utama dari permasalahan ini adalah membantu menyalurkan informasi me
 Data diperoleh dari Kaggle (https://www.kaggle.com/datasets/ilhamfp31/kue-indonesia) berjumlah 1845 data dimana terdapat data testing sebanyak 162 data, data training sebanyak 1523 data, data validation sebanyak 160 data.
 
 # Data Exploration
-Data berupa kumpulan foto kue tradisional dari 8 kelas pada dataset.
+Data berupa kumpulan foto kue tradisional Indonesia dari 8 kelas yang terdiri dari kue klepon, kue lumpur, kue kastengel, kue putri salju, kue serabi, kue lapis, kue risoles, dan kue dadar gulung dengan jumlah pada setiap kelas adalah 240 data, 238 data, 223 data, 214 data, 221 data, 241 data, 236 data, dan 232 data.
 
