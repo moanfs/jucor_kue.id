@@ -13,8 +13,8 @@ Anggota Kelompok:
 
 # Problem Solving
 Who : masyarakat dan khususnya wisatawan asing.
-What : kurangnya informasi mengenai jenis-jenis kue indonesia sehingga dibuatlah sebuah aplikasi berbasis web untuk membantu masyarakat mencari tau mengenai kue-kue tradisional indonesia.
-Where: pada saat masyarakat yang berada di dalam maupun di luar Indonesia membutuhkan informasi mengenai kue tradisional indonesia (?).
+What : Ketertinggalan kue tradisional Indonesia dibandingkan kue-kue modern saat ini apalagi kue-kue modern memiliki proses pembuatan yang lebih efisien dan mudah didapatkan daripada kue tradisional sehingga memiliki kemungkinan bahwa kedepannya kue tradisional Indonesia tidak banyak diketahui oleh masyarakat.
+Where: pada saat masyarakat yang berada di dalam maupun di luar Indonesia membutuhkan informasi mengenai kue tradisional indonesia
 Why : nilai utama dari permasalahan ini adalah membantu menyalurkan informasi mengenai kue tradisional Indonesia
 
 # Data Acquisition
