@@ -3,11 +3,11 @@
 
 Anggota Kelompok:
 
-Halomoan Filipus Simarmata (Jupyter XXI)
-Diana Eka Riyani (Jupyter XXI)
-Nyayu Chika Marselina (Jupyter XXI)
-Sukma Imelda (Cordoba)
-Athiya Shinta Wulandari (Cordoba)
+1. Halomoan Filipus Simarmata (Jupyter XXI)
+2. Diana Eka Riyani (Jupyter XXI)
+3. Nyayu Chika Marselina (Jupyter XXI)
+4. Sukma Imelda (Cordoba)
+5. Athiya Shinta Wulandari (Cordoba)
 
 # AI Project Cycle (Computer Vision)
 
@@ -33,4 +33,5 @@ Dari pengolahan data yang kami lakukan seperti:
 3. Split data
 4. Pelatihan Model
 5. Dan lain-lain
+
 Kami mendapat akurasi 100%, dari hasil akurasi tersebut memungkinkan dapat terjadinya overfitting tetapi dari hasil plot confusion matrix tidak ada kesalahan data. Mungkin bisa terjadi akibat data yang kami gunakan hanya sekitar -+8% dari data aslinya.
