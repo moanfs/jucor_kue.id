@@ -4,10 +4,10 @@ Proyek Akhir MBKM Orbit
 Anggota Kelompok:
 
 1. Halomoan Filipus Simarmata (Jupyter XXI)
-2. Diana Eka Riyani (Jupyter XXI)
-3. Nyayu Chika Marselina (Jupyter XXI)
+2. Nyayu Chika Marselina (Jupyter XXI)
+3. Athiya Shinta Wulandari (Cordoba)
 4. Sukma Imelda (Cordoba)
-5. Athiya Shinta Wulandari (Cordoba)
+5. Wella Novita Andriani (Cordoba)
 
 # AI Project Cycle (Computer Vision)
 
