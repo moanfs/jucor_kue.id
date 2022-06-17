@@ -25,3 +25,6 @@ Data berupa kumpulan foto kue tradisional Indonesia dari 8 kelas yang terdiri da
 
 # Video Presentasi Proyek Akhir
 link : https://drive.google.com/file/d/19-NOKoUln9XaTWFxhcq2jFva2hJlOstS/view?usp=sharing
+
+# Hasil Augmentasi Data Kue Tradisional Indonesia
+link : https://drive.google.com/drive/folders/1VWJdj_cNvhb_m20RZVC6loaCIU3NhMn8
