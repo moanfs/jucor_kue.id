@@ -1,5 +1,5 @@
 # Klasifikasi Kue Tradisional Indonesia Menggunakan Algoritma CNN dan VisionTransformer
-Proyek Akhir MSIB Orbit
+Proyek Akhir MSIB Orbit Future Academy
 
 Anggota Kelompok:
 
