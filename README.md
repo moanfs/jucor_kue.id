@@ -1,4 +1,4 @@
-# Klasifikasi Kue Tradisional Indonesia Menggunakan Algoritma CNN dan VisionTransformer
+# Klasifikasi Kue Tradisional Indonesia Menggunakan Algoritma CNN dan Vision Transformer
 Proyek Akhir MSIB Orbit Future Academy
 
 Anggota Kelompok:
