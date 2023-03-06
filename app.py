@@ -23,11 +23,11 @@ if uploaded_file is not None:
     image = Image.open(BytesIO(bytes_image))
     st.image(image, caption='Data Testing')
 
-    #Preprocessing
     image_np = np.asarray(image)
+    #Assuming your model expects Input shape (None, 64, 64, 1), biar input sesuai sama inputan awal. Kalo ndak sesuai nanti error
     resized_image = cv.resize(image_np, (200,200))
-    img_rgb = cv.cvtColor(resized_image, cv.COLOR_BGR2RGB)
-    image_rgb = np.asarray(img_rgb)
+    resized_image = np.expand_dims(resized_image, axis=-1) #add a new dimension
+    resized_image = np.expand_dims(resized_image, axis=0)
 
     # Loading ResNet50 model
     base_resnet_model = ResNet50(include_top=False,
@@ -48,5 +48,5 @@ if uploaded_file is not None:
     resnet_model.load_weights("ResNet50.h5")
 
     #Proses
-    output = resnet_model.predict(image_rgb)
+    output = resnet_model.predict(resized_image)
     st.write(output)
