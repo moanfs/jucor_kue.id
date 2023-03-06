@@ -49,4 +49,4 @@ if uploaded_file is not None:
 
     #Proses
     output = resnet_model.predict(resized_image)
-    st.write(output)
+    st.write(np.rint(output))
