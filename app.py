@@ -50,5 +50,3 @@ if uploaded_file is not None:
     #Proses
     output = resnet_model.predict(image_rgb)
     st.write(output)
-
-    
