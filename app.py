@@ -3,6 +3,7 @@ import numpy as np
 import cv2 as cv
 import os
 import tensorflow as tf
+from PIL import Image
 from tensorflow.keras.layers import *
 from tensorflow.keras.models import *
 
@@ -30,21 +31,21 @@ if uploaded_file is not None:
     output = resnet_model.predict(image_rgb)
     st.write(output)
 
-# Loading ResNet50 model
-base_resnet_model = ResNet50(include_top=False,
-                   input_shape=(200,200,3),
-                   pooling='max',classes=8,
-                   weights='imagenet')
+    # Loading ResNet50 model
+    base_resnet_model = ResNet50(include_top=False,
+                    input_shape=(200,200,3),
+                    pooling='max',classes=8,
+                    weights='imagenet')
 
-base_resnet_model.trainable = False
+    base_resnet_model.trainable = False
 
-# Transfer learning ResNet50
-resnet_model = tf.keras.models.Sequential([
-    base_resnet_model,
-    tf.keras.layers.Flatten(),
-    tf.keras.layers.Dense(64, activation="relu"),
-    tf.keras.layers.Dense(64, activation="relu"),
-    tf.keras.layers.Dense(8, activation="softmax")
-])
+    # Transfer learning ResNet50
+    resnet_model = tf.keras.models.Sequential([
+        base_resnet_model,
+        tf.keras.layers.Flatten(),
+        tf.keras.layers.Dense(64, activation="relu"),
+        tf.keras.layers.Dense(64, activation="relu"),
+        tf.keras.layers.Dense(8, activation="softmax")
+    ])
 
-resnet_model = load_model('CNN-ResNet.h5', compile=False)
+    resnet_model = load_model('CNN-ResNet.h5', compile=False)
