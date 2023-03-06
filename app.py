@@ -45,8 +45,7 @@ if uploaded_file is not None:
         tf.keras.layers.Dense(64, activation="relu"),
         tf.keras.layers.Dense(8, activation="softmax")
     ])
-
-    resnet_model = load_model('CNN-ResNet.h5', compile=False)
+    resnet_model.load_weights("ResNet50.h5")
 
     #Proses
     output = resnet_model.predict(image_rgb)
