@@ -1,6 +1,10 @@
 import streamlit as st
 import numpy as np
 import cv2 as cv
+import os
+import tensorflow as tf
+from tensorflow.keras.layers import *
+from tensorflow.keras.models import *
 
 st.title("Klasifikasi Kue Tradisional")
 
@@ -22,6 +26,9 @@ if uploaded_file is not None:
     resized_image = cv.resize(image_np, (200,200))
     img_rgb = cv.cvtColor(resized_image, cv.COLOR_BGR2RGB)
     image_rgb = np.asarray(img_rgb)
+    #Proses
+    output = resnet_model.predict(image_rgb)
+    st.write(output)
 
 # Loading ResNet50 model
 base_resnet_model = ResNet50(include_top=False,
@@ -40,8 +47,4 @@ resnet_model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(8, activation="softmax")
 ])
 
-resnet_model.load_model('hasil_ResNet50.h5')
-
-#Proses
-output = resnet_model.predict(image_rgb)
-st.write(output)
+resnet_model = load_model('CNN-ResNet.h5', compile=False)
