@@ -48,5 +48,38 @@ if uploaded_file is not None:
     resnet_model.load_weights("ResNet50.h5")
 
     #Proses
-    output = resnet_model.predict(resized_image)
-    st.write(np.rint(output))
+    result = resnet_model.predict(resized_image)
+    # output = np.rint(result)
+
+    # nama_kue = {
+    #     0: 'Kue Dadar Gulung',
+    #     1: 'Kastengel',
+    #     2: 'Kue Klepon',
+    #     3: 'Kue Lapis',
+    #     4: 'Kue Lumpur',
+    #     5: 'Kue Putri Salju',
+    #     6: 'Kue Risoles',
+    #     7: 'Kue Serabi'
+    # }
+    # st.write(nama_kue)
+    # st.write(output)
+
+    hasil = np.argmax(result)
+    # st.text(hasil)
+
+    if hasil==0:
+        st.text("Kue Dadar Gulung")
+    elif hasil==1:
+        st.text("Kue Kastengel")
+    elif hasil==2:
+        st.text("Kue Klepon")
+    elif hasil==3:
+        st.text("Kue Lapis")
+    elif hasil==4:
+        st.text("Kue Lumpur")
+    elif hasil==5:
+        st.text("Kue Putri Salju")
+    elif hasil==6:
+        st.text("Kue Risoles")
+    else:
+        st.text("Kue Serabi")
