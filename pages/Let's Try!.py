@@ -28,7 +28,8 @@ page_bg_img = """
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("Indonesia Traditional Cake Classification")
+st.title("INDONESIA TRADITIONAL CAKE")
+st.subheader("Upload Your Picture")
 
 from tensorflow.keras.applications import ResNet50
 

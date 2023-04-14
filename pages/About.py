@@ -21,6 +21,17 @@ page_bg_img = """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("About")
+import gmaps
+
+from ipywidgets import embed
+# Plot coordinates
+coordinates = (40.75, -74)
+_map = gmaps.figure(center=coordinates, zoom_level=12)
+
+# Render map in Streamlit
+snippet = embed.embed_snippet(views=_map)
+html = embed.html_template.format(title="test", snippet=snippet)
+com.html(html, height=500,width=500)
 
 img1 = st.image("1.png")
 with st.container():
