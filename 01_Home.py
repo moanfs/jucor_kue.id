@@ -4,6 +4,11 @@ import gmaps
 from ipywidgets import embed
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
+from streamlit_extras.mention import mention
+import requests
+from streamlit_lottie import st_lottie
+
+st.set_page_config(layout="wide")
 
 page_bg_img = """
 <style>
@@ -19,11 +24,7 @@ page_bg_img = """
   background-color: #5e6472;
 }
 
-[data-testid="stHorizontalBlock"]{
-  background-color: #fff;
-}
-
-# [data-testid="stVerticalBlock"]{
+# [data-testid="stHorizontalBlock"]{
 #   background-color: #fff;
 # }
 </style>
@@ -33,12 +34,29 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Home")
 
 st.subheader("We offer modern solutions for detecting Indonesia traditional food by your picture.")
+@st.cache_data
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_url = "https://assets5.lottiefiles.com/packages/lf20_dsxct2el.json"
+lottie_json = load_lottieurl(lottie_url)
+st_lottie(lottie_json, height=300)
+
 if st.button("Get Started"):
   switch_page("Let's Try!")
 
 container = st.container()
-container.header("Who We Are?")
-container.subheader("We are a team from the 2nd batch of independent study programs.")
+
+with container:
+  st.subheader("Who We Are?")
+  st.write(
+    """We are participants of batch two of Internship and Independent Study Certified program. Certified internship program
+    is an accelerated program with well-designed learning experiences. Certified independent study is a learning in
+    class that is specially designed and made based on the real challenges faced by partners or industry.
+  """)
 
 with container:
   # Plot coordinates
@@ -115,6 +133,11 @@ with container:
     <span>Jupyter XXI</span>
     <p>Universitas Sriwijaya</p>
     """)
+    mention(
+      label="@nyayuchika",
+      icon="instagram",
+      url="https://ig.me/m/nyayuchika",
+    )
   with col4:
     com.html("""
     <h4>Sukma Imelda</h4>
