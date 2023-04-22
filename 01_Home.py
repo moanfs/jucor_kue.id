@@ -12,16 +12,16 @@ st.set_page_config(layout="wide")
 
 page_bg_img = """
 <style>
-[data-testid="stAppViewContainer"]{
-  background: linear-gradient(to bottom right, #deaaff, #c0fdff);
-}
+# [data-testid="stAppViewContainer"]{
+#   background-color: #fff;
+# }
 
 [data-testid="stHeader"]{
-  background-color: #5e6472;
+  background-color: #F97728;
 }
 
 [data-testid="stSidebar"]{
-  background-color: #5e6472;
+  background-color: #FFCEA5;
 }
 
 # [data-testid="stHorizontalBlock"]{
@@ -31,24 +31,24 @@ page_bg_img = """
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("Home")
-
-st.subheader("We offer modern solutions for detecting Indonesia traditional food by your picture.")
-@st.cache_data
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_url = "https://assets5.lottiefiles.com/packages/lf20_dsxct2el.json"
-lottie_json = load_lottieurl(lottie_url)
-st_lottie(lottie_json, height=300)
-
-if st.button("Get Started"):
-  switch_page("Let's Try!")
-
 container = st.container()
+
+with container:
+  home1, home2 = st.columns([11,8])
+  with home1:
+    st.title("We offer a modern solution for detecting Indonesia traditional food by your picture.")
+    if st.button("Get Started"):
+      switch_page("Let's Try!")
+  with home2:
+    @st.cache_data
+    def load_lottieurl(url: str):
+        r = requests.get(url)
+        if r.status_code != 200:
+            return None
+        return r.json()
+    lottie_url = "https://assets5.lottiefiles.com/packages/lf20_dsxct2el.json"
+    lottie_json = load_lottieurl(lottie_url)
+    st_lottie(lottie_json, height=400)
 
 with container:
   st.subheader("Who We Are?")
@@ -58,15 +58,19 @@ with container:
     class that is specially designed and made based on the real challenges faced by partners or industry.
   """)
 
+#Location
 with container:
+  st.header("Location")
+  st.subheader("Orbit Future Academy")
+  st.write("")
   # Plot coordinates
-  coordinates = (-6.219179776989336, 106.81404408060594)
-  _map = gmaps.figure(center=coordinates, zoom_level=12)
+  # coordinates = (-6.219179776989336, 106.81404408060594)
+  # _map = gmaps.figure(center=coordinates, zoom_level=12)
 
-  # Render map in Streamlit
-  snippet = embed.embed_snippet(views=_map)
-  html = embed.html_template.format(title=" ", snippet=snippet)
-  com.html(html, height=500,width=500)
+  # # Render map in Streamlit
+  # snippet = embed.embed_snippet(views=_map)
+  # html = embed.html_template.format(title=" ", snippet=snippet)
+  # com.html(html, height=500,width=500)
 
 #Class of Cakes
 with container:
@@ -117,39 +121,54 @@ with container:
   col1, col2, col3, col4, col5 = st.columns(5)
   with col1:
     com.html("""
-    <h4>Athiya Shinta Wulandari</h4>
-    <span>Cordoba</span>
-    <p>Universitas Muhammadiyah Surabaya</p>
-    """)
+    <h4 style="font-family:sans-serif; text-align:center;">Athiya Shinta W</h4>
+    <p style="font-family:sans-serif; text-align:center;">Cordoba</p>
+    <p style="font-family:sans-serif; text-align:center;">Universitas Muhammadiyah Surabaya</p>
+    """, height=135)
+    mention(
+      label="@athiyashinta.w",
+      url="https://ig.me/m/athiyashinta.w",
+    )
   with col2:
     com.html("""
-    <h4>Halomoan Filipus Simarmata</h4>
-    <span>Jupyter XXI</span>
-    <p>Universitas Telkom</p>
-    """)
+    <h4 style="font-family:sans-serif; text-align:center;">Halomoan Filipus S</h4>
+    <p style="font-family:sans-serif; text-align:center;">Jupyter XXI</p>
+    <p style="font-family:sans-serif; text-align:center;">Universitas Telkom</p>
+    """, height=135)
+    mention(
+      label="@moan.fs",
+      url="https://ig.me/m/moan.fs",
+    )
   with col3:
     com.html("""
-    <h4>Nyayu Chika Marselina</h4>
-    <span>Jupyter XXI</span>
-    <p>Universitas Sriwijaya</p>
-    """)
+    <h4 style="font-family:sans-serif; text-align:center;">Nyayu Chika Marselina</h4>
+    <p style="font-family:sans-serif; text-align:center;">Jupyter XXI</p>
+    <p style="font-family:sans-serif; text-align:center;">Universitas Sriwijaya</p>
+    """, height=135)
     mention(
       label="@nyayuchika",
-      icon="instagram",
       url="https://ig.me/m/nyayuchika",
     )
   with col4:
     com.html("""
-    <h4>Sukma Imelda</h4>
-    <span>Cordoba</span>
-    <p>Universitas Merdeka Malang</p>
-    """)
+    <h4 style="font-family:sans-serif; text-align:center;">Sukma Imelda</h4>
+    <p style="font-family:sans-serif; text-align:center;">Cordoba</p>
+    <p style="font-family:sans-serif; text-align:center;">Universitas Merdeka Malang</p>
+    """, height=135)
+    mention(
+      label="@imld19_",
+      url="https://ig.me/m/imld19_",
+    )
   with col5:
     com.html("""
-    <h4>Wella Novita Andriani</h4>
-    <span>Cordoba</span>
-    <p>Universitas Internasional Semen Indonesia</p>
-    """)
+    <h4 style="font-family:sans-serif; text-align:center;">Wella Novita Andriani</h4>
+    <p style="font-family:sans-serif; text-align:center;">Cordoba</p>
+    <p style="font-family:sans-serif; text-align:center;">Universitas Internasional Semen Indonesia</p>
+    """, height=135)
+    mention(
+      label="@wellanvtadr",
+      url="https://ig.me/m/wellanvtadr",
+    )
 
 #Partner
 with container:

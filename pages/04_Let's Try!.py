@@ -12,18 +12,21 @@ from tensorflow.keras.models import *
 
 page_bg_img = """
 <style>
-[data-testid="stAppViewContainer"]{
-  background: linear-gradient(to bottom right, #deaaff, #c0fdff);
-}
+# [data-testid="stAppViewContainer"]{
+#   background: linear-gradient(to bottom right, #deaaff, #c0fdff);
+# }
 
 [data-testid="stHeader"]{
-  background-color: #5e6472;
+  background-color: #F97728;
 }
 
 [data-testid="stSidebar"]{
-  background-color: #5e6472;
+  background-color: #FFCEA5;
 }
 
+# [data-testid="stHorizontalBlock"]{
+#   background-color: #fff;
+# }
 </style>
 """
 
