@@ -4,6 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit_extras.mention import mention
 import requests
 from streamlit_lottie import st_lottie
+import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
 
@@ -120,7 +121,7 @@ with container:
     st.image(new_image, use_column_width=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Kue Lapis</p>", unsafe_allow_html=True)
   with logo:
-    image = Image.open("img/client-6.webp")
+    image = Image.open("img/logo-cakefinder.jpg")
     new_image = image.resize((200,150))
     st.image(new_image, use_column_width=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Cake Finder</p>", unsafe_allow_html=True)
@@ -163,6 +164,7 @@ with container:
   st.markdown("<h2 style='font-family:sans-serif; text-align:center; margin:0; padding-top:0;'>Our Team</h2>", unsafe_allow_html=True)
   col1, col2, col3, col4, col5 = st.columns(5)
   with col1:
+    st.image(Image.open("team/3.png"), use_column_width=True)
     st.markdown("<h5 style='font-family:sans-serif; text-align:center;'>Athiya Shinta W</h5>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Cordoba</p>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center; line-height:20px;'><i>Universitas Muhammadiyah Surabaya</i></p>", unsafe_allow_html=True)
@@ -171,6 +173,7 @@ with container:
       url="https://ig.me/m/athiyashinta.w",
     )
   with col2:
+    st.image(Image.open("team/2.png"), use_column_width=True)
     st.markdown("<h5 style='font-family:sans-serif; text-align:center;'>Nyayu Chika M</h5>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Jupyter XXI</p>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center; line-height:20px;'><i>Universitas Sriwijaya</i></p>", unsafe_allow_html=True)
@@ -179,6 +182,7 @@ with container:
       url="https://ig.me/m/nyayuchika",
     )
   with col3:
+    st.image(Image.open("team/1.png"), use_column_width=True)
     st.markdown("<h5 style='font-family:sans-serif; text-align:center;'>Halomoan Filipus S</h5>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Jupyter XXI</p>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center; line-height:20px;'><i>Universitas Telkom</i></p>", unsafe_allow_html=True)
@@ -187,6 +191,7 @@ with container:
       url="https://ig.me/m/moan.fs",
     )
   with col4:
+    st.image(Image.open("team/4.png"), use_column_width=True)
     st.markdown("<h5 style='font-family:sans-serif; text-align:center;'>Sukma Imelda</h5>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Cordoba</p>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center; line-height:20px;'><i>Universitas Merdeka Malang</i></p>", unsafe_allow_html=True)
@@ -195,6 +200,7 @@ with container:
       url="https://ig.me/m/imld19_",
     )
   with col5:
+    st.image(Image.open("team/5.png"), use_column_width=True)
     st.markdown("<h5 style='font-family:sans-serif; text-align:center;'>Wella Novita A</h5>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center;'>Cordoba</p>" ,unsafe_allow_html=True)
     st.markdown("<p style='font-family:sans-serif; text-align:center; line-height:20px;'><i>Universitas Internasional Semen Indonesia</i></p>", unsafe_allow_html=True)
@@ -208,43 +214,60 @@ with container:
   st.write(" ")
   st.write(" ")
 
-#Partner
-with container:
-  st.title("Our Partner")
-  p1,p2,p3,p4,p5,p6,p7,p8,p9 = st.columns(9)
-  with p1:
-    image = Image.open("img/client-1.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p2:
-    image = Image.open("img/client-2.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p3:
-    image = Image.open("img/client-3.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p4:
-    image = Image.open("img/client-4.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p5:
-    image = Image.open("img/client-5.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p6:
-    image = Image.open("img/client-6.webp")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p7:
-    image = Image.open("img/client-7.png")
-    new_image = image.resize((130,110))
-    st.image(new_image)
-  with p8:
-    image = Image.open("img/client-8.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
-  with p9:
-    image = Image.open("img/client-9.png")
-    new_image = image.resize((100,100))
-    st.image(new_image)
+# #Partner
+# with container:
+#   p1,p2,p3,p4,p5,p6,p7,p8,p9 = st.columns(9)
+#   with p1:
+#     image = Image.open("img/client-1.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p2:
+#     image = Image.open("img/client-2.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p3:
+#     image = Image.open("img/client-3.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p4:
+#     image = Image.open("img/client-4.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p5:
+#     image = Image.open("img/client-5.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p6:
+#     image = Image.open("img/client-6.webp")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p7:
+#     image = Image.open("img/client-7.png")
+#     new_image = image.resize((130,110))
+#     st.image(new_image)
+#   with p8:
+#     image = Image.open("img/client-8.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+#   with p9:
+#     image = Image.open("img/client-9.png")
+#     new_image = image.resize((100,100))
+#     st.image(new_image)
+
+def main():
+    imageCarouselComponent = components.declare_component("image-carousel-component", path="frontend/public")
+    imageUrls = [
+        "https://disdikbud.banyuasinkab.go.id/wp-content/uploads/sites/269/2022/11/cropped-Logo-Tut-Wuri-Handayani-PNG-Warna.png",
+        "https://1.bp.blogspot.com/-xqJZIyNpxzQ/YZbLaDFZ2ZI/AAAAAAAAThk/FKzjx3AH95U8FM5AJInhzsBIDAKMeY9hwCLcBGAsYHQ/w1200-h630-p-k-no-nu/Kampus%2BMerdeka.png",
+        "https://kampusmerdeka.um.ac.id/wp-content/uploads/2022/06/channels4_profile.jpg",
+        "https://orbitfutureacademy.id/wp-content/uploads/2020/10/logo.jpg",
+        "https://www.um-surabaya.ac.id/assets/photos/3a2d433e-355e-11e8-8ac5-cced40789894_Logo%20UMSurabaya%20icon%20by%20(mascitra.com).png",
+        "https://pelajarinfo.id/wp-content/uploads/2022/10/Universitas-Sriwijaya-Logo.png",
+        "https://anaktelkom.com/wp-content/uploads/2021/08/Logo-Telkom-University-900x1024.png",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e5/Logo_Unmer_resmi.png",
+        "https://akupintar.id/documents/20143/0/5iU1Ls85_400x400.png/4743311c-81d0-8541-93da-fde3047fbf9d?version=1.0&t=1623326497710&imagePreview=1",
+    ]
+    selectedImageUrl = imageCarouselComponent(imageUrls=imageUrls, height=100)
+
+if __name__ == "__main__":
+    main()
