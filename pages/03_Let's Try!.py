@@ -44,8 +44,14 @@ if uploaded_file is not None:
     bytes_image = uploaded_file.read() #baca image
 
     #nampilin gambar
-    image = Image.open(BytesIO(bytes_image))
-    st.image(image, caption='Data Testing')
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.write(" ")
+    with col2:
+        image = Image.open(BytesIO(bytes_image))
+        st.image(image.resize((300,300)))
+    with col3:
+        st.write(" ")
 
     image_np = np.asarray(image)
     #Assuming your model expects Input shape (None, 64, 64, 1), biar input sesuai sama inputan awal. Kalo ndak sesuai nanti error
@@ -75,35 +81,22 @@ if uploaded_file is not None:
     result = resnet_model.predict(resized_image)
     # output = np.rint(result)
 
-    # nama_kue = {
-    #     0: 'Kue Dadar Gulung',
-    #     1: 'Kastengel',
-    #     2: 'Kue Klepon',
-    #     3: 'Kue Lapis',
-    #     4: 'Kue Lumpur',
-    #     5: 'Kue Putri Salju',
-    #     6: 'Kue Risoles',
-    #     7: 'Kue Serabi'
-    # }
-    # st.write(nama_kue)
-    # st.write(output)
-
     hasil = np.argmax(result)
     # st.text(hasil)
 
     if hasil==0:
-        st.text("Kue Dadar Gulung")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Dadar Gulung</h5>", unsafe_allow_html=True)
     elif hasil==1:
-        st.text("Kue Kastengel")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Kastengel</h5>", unsafe_allow_html=True)
     elif hasil==2:
-        st.text("Kue Klepon")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Klepon</h5>", unsafe_allow_html=True)
     elif hasil==3:
-        st.text("Kue Lapis")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Lapis</h5>", unsafe_allow_html=True)
     elif hasil==4:
-        st.text("Kue Lumpur")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Lumpur</h5>", unsafe_allow_html=True)
     elif hasil==5:
-        st.text("Kue Putri Salju")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Putri Salju</h5>", unsafe_allow_html=True)
     elif hasil==6:
-        st.text("Kue Risoles")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Risoles</h5>", unsafe_allow_html=True)
     else:
-        st.text("Kue Serabi")
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Serabi</h5>", unsafe_allow_html=True)
