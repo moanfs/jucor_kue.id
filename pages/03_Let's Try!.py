@@ -31,9 +31,9 @@ page_bg_img = """
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("INDONESIA TRADITIONAL CAKE")
-st.subheader("Upload Your Picture")
-
+st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>INDONESIA TRADITIONAL CAKES</h5>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-family:sans-serif; text-align:center; margin:0; padding-top:0;'>Upload Your Picture</h2>", unsafe_allow_html=True)
+  
 from tensorflow.keras.applications import ResNet50
 
 ###Input Image
