@@ -1,32 +1,37 @@
 import streamlit as st
 from PIL import Image
-import streamlit.components.v1 as components
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='About Cake Finder', page_icon='img/logo-cakefinder.jpg', layout='wide')
 
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"]{
-  background-color: #fff;
+  background-image: linear-gradient(to bottom right, #c0fdff, #cddafd);
 }
 
 [data-testid="stHeader"]{
-  background-color: #F97728;
+  background-color: #778da9;
 }
 
-[data-testid="stSidebar"]{
-  background-color: #fbeee6;
-}
-
-# [data-testid="stHorizontalBlock"]{
-#   background-color: #fff;
-# }
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 container = st.container()
+
+with container:
+  st.markdown("<h2 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>What is Cake Finder?</h2>", unsafe_allow_html=True)
+  st.write(
+    """We are participants of batch two of Internship and Independent Study Certified program. Certified internship program
+    is an accelerated program with well-designed learning experiences. Certified independent study is a learning in
+    class that is specially designed and made based on the real challenges faced by partners or industry.
+  """)
+  st.write(" ")
+  st.write(" ")
+  st.write(" ")
+  st.write(" ")
+  st.write(" ")
 
 #Class of Cakes
 with container:

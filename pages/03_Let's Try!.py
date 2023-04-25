@@ -7,26 +7,21 @@ import tensorflow as tf
 from PIL import Image
 from tensorflow.keras.layers import *
 from tensorflow.keras.models import *
+import time
 
 # import streamlit.components.v1 as com
+
+st.set_page_config(page_title='Try it!', page_icon='img/logo-cakefinder.jpg', layout='wide')
 
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"]{
-  background-color: #fff;
+  background-image: linear-gradient(to bottom right, #c0fdff, #cddafd);
 }
 
 [data-testid="stHeader"]{
-  background-color: #F97728;
+  background-color: #778da9;
 }
-
-[data-testid="stSidebar"]{
-  background-color: #fbeee6;
-}
-
-# [data-testid="stHorizontalBlock"]{
-#   background-color: #fff;
-# }
 </style>
 """
 
@@ -80,6 +75,10 @@ if uploaded_file is not None:
     #Proses
     result = resnet_model.predict(resized_image)
     # output = np.rint(result)
+
+    with st.spinner('Wait for it...'):
+        time.sleep(5)
+    st.success('Done!')
 
     hasil = np.argmax(result)
     # st.text(hasil)

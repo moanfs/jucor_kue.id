@@ -3,27 +3,20 @@ from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import requests
 from streamlit_lottie import st_lottie
+import json
 import streamlit.components.v1 as components
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Cake Finder', page_icon='img/logo-cakefinder.jpg', layout='wide')
 
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"]{
-  background-color: #fff;
+  background-image: linear-gradient(to bottom right, #c0fdff, #cddafd);
 }
 
 [data-testid="stHeader"]{
-  background-color: #F97728;
+  background-color: #778da9;
 }
-
-[data-testid="stSidebar"]{
-  background-color: #fbeee6 ;
-}
-
-# [data-testid="stHorizontalBlock"]{
-#   background-color: #fff;
-# }
 </style>
 """
 
@@ -35,8 +28,8 @@ with container:
   home1, home2 = st.columns([11,8])
   with home1:
     st.title("We offer a modern solution for detecting Indonesia traditional cake by your picture.")
-    if st.button("Let's Try!"):
-      switch_page("Let's Try!")
+    if st.button("Get Started"):
+      switch_page("About")
   with home2:
     @st.cache_data
     def load_lottieurl(url: str):
