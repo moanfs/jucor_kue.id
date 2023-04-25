@@ -12,16 +12,16 @@ from tensorflow.keras.models import *
 
 page_bg_img = """
 <style>
-# [data-testid="stAppViewContainer"]{
-#   background: linear-gradient(to bottom right, #deaaff, #c0fdff);
-# }
+[data-testid="stAppViewContainer"]{
+  background-color: #fff;
+}
 
 [data-testid="stHeader"]{
   background-color: #F97728;
 }
 
 [data-testid="stSidebar"]{
-  background-color: #FFCEA5;
+  background-color: #fbeee6;
 }
 
 # [data-testid="stHorizontalBlock"]{
@@ -49,7 +49,7 @@ if uploaded_file is not None:
         st.write(" ")
     with col2:
         image = Image.open(BytesIO(bytes_image))
-        st.image(image.resize((300,300)))
+        st.image(image, use_column_width=True)
     with col3:
         st.write(" ")
 
@@ -85,18 +85,18 @@ if uploaded_file is not None:
     # st.text(hasil)
 
     if hasil==0:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Dadar Gulung</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Dadar Gulung</h5>", unsafe_allow_html=True)
     elif hasil==1:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Kastengel</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kastengel</h5>", unsafe_allow_html=True)
     elif hasil==2:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Klepon</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Klepon</h5>", unsafe_allow_html=True)
     elif hasil==3:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Lapis</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Lapis</h5>", unsafe_allow_html=True)
     elif hasil==4:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Lumpur</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Lumpur</h5>", unsafe_allow_html=True)
     elif hasil==5:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Putri Salju</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Putri Salju</h5>", unsafe_allow_html=True)
     elif hasil==6:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Risoles</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Risoles</h5>", unsafe_allow_html=True)
     else:
-        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Kue Serabi</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='font-family:sans-serif; text-align:center; margin-bottom:0;'>Serabi</h5>", unsafe_allow_html=True)
