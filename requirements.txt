@@ -1,11 +1,8 @@
-pip==25.0.1
 numpy==1.23.5
-opencv_python==4.7.0.72
-Pillow==9.5.0
+opencv-python-headless==4.7.0.72
 Pillow==11.1.0
-Requests==2.32.3
+requests==2.32.3
 streamlit==1.21.0
 streamlit_extras==0.6.0
 streamlit_lottie==0.0.3
 tensorflow==2.12.0
-tensorflow_intel==2.12.0
